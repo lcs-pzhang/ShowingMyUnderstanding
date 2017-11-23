@@ -64,11 +64,11 @@ canvas.lineColor=Color.init(hue: 0, saturation: 100, brightness: 95, alpha: 70)
 canvas.drawLine(fromX: 165, fromY: 145, toX: 165, toY: 50)
 
 canvas.fillColor=Color.init(hue: 111, saturation: 100, brightness: 95, alpha: 70)
-canvas.drawEllipse(centreX: 70, centreY: 190, width: 90, height: 90)
+canvas.drawEllipse(centreX: 75, centreY: 190, width: 90, height: 90)
 
 canvas.defaultLineWidth=5
 canvas.lineColor=Color.init(hue: 111, saturation: 100, brightness: 95, alpha: 70)
-canvas.drawLine(fromX: 70, fromY: 145, toX: 70, toY: 50)
+canvas.drawLine(fromX: 75, fromY: 145, toX: 75, toY: 50)
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
