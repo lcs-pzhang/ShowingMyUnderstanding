@@ -28,7 +28,19 @@ let canvas = Canvas(width: 300, height: 300)
 // Generate a random number
 let number = random(from: 0, toButNotIncluding: 2)
 
-// Replace this comment and add your code below...
+for x in stride(from: 0, to: 300, by: 100) {
+    canvas.fillColor=Color.init(hue: 170, saturation: 95, brightness: 95, alpha: 100)
+    if number == 0 {
+        // square
+        canvas.drawRectangle(centreX: 150, centreY: 150, width: 40, height: 40)
+    } else if number == 1 {
+        //circle
+        canvas.drawEllipse(centreX: 150, centreY: 150, width: 40, height: 40)
+        
+    }
+}
+
+
 
 /*:
  ## Template code
