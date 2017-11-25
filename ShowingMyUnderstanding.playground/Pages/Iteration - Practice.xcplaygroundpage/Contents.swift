@@ -32,7 +32,7 @@ for y in stride(from: 0, through: 200, by: 100) {
     for x in stride(from: 0, to: 300, by: 50) {
         canvas.fillColor=Color.black
         canvas.drawRectangle(centreX: x+15, centreY: y+30, width: 20, height: 5)
-        canvas.drawRectangle(centreX: x+20, centreY: y+10, width: 20, height: 5)
+        canvas.drawRectangle(centreX: x+30, centreY: y+10, width: 20, height: 5)
     }
 
 }

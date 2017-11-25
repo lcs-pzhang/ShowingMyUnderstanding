@@ -21,20 +21,32 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-canvas.translate(byX: 150, byY: 150)
-canvas.drawAxes()
-
 // Generate a random number
 let number=random(from: 0, toButNotIncluding: 3)
 
 if number == 0 {
-    canvas.fillColor=Color.init(hue: 200, saturation: 80, brightness: 95, alpha: 80)
+    canvas.fillColor=Color.init(hue: 200, saturation: 80, brightness: 95, alpha: 60)
 } else if number == 1 {
-        canvas.fillColor=Color.init(hue: 0, saturation: 95, brightness: 95, alpha: 100)
-    } else if number == 2 {
-        canvas.fillColor=Color.init(hue: 61, saturation: 95, brightness: 95, alpha: 100)
-    }
+    canvas.fillColor=Color.init(hue: 0, saturation: 95, brightness: 95, alpha: 60)
+} else if number == 2 {
+    canvas.fillColor=Color.init(hue: 61, saturation: 95, brightness: 95, alpha: 60)
+    
+}
 
+canvas.drawRectangle(centreX: 150, centreY: 150, width: 300, height: 300)
+
+for i in stride(from: 0, through: 300, by: 5) {
+    canvas.lineColor=Color.init(hue: 200, saturation: 95, brightness: 95, alpha: 100)
+    canvas.defaultLineWidth=1
+    canvas.drawLine(fromX: 0, fromY: 0, toX: i+5, toY: 300)
+    
+    canvas.lineColor=Color.init(hue: 100, saturation: 81, brightness: 90, alpha: 100)
+    canvas.defaultLineWidth=3
+    canvas.drawLine(fromX: 300, fromY: 300, toX: i+5, toY: 0)
+}
+
+
+canvas.translate(byX: 150, byY: 150)
 
 canvas.drawShapesWithBorders = false
 
@@ -70,8 +82,11 @@ for i in stride(from: 1, through: 8, by: 1) {
     canvas.drawLine(fromX: 10, fromY: 55, toX: 1, toY: 70)
     canvas.rotate(by: 45)
 }
-/*:
- ## Template code
- The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
- */
+
+
+
+
+
+
+
 PlaygroundPage.current.liveView = canvas.imageView
