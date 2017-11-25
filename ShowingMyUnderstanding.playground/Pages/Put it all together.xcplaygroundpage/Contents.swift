@@ -24,6 +24,18 @@ let canvas = Canvas(width: 300, height: 300)
 canvas.translate(byX: 150, byY: 150)
 canvas.drawAxes()
 
+// Generate a random number
+let number=random(from: 0, toButNotIncluding: 3)
+
+if number == 0 {
+    canvas.fillColor=Color.init(hue: 200, saturation: 80, brightness: 95, alpha: 80)
+} else if number == 1 {
+        canvas.fillColor=Color.init(hue: 0, saturation: 95, brightness: 95, alpha: 100)
+    } else if number == 2 {
+        canvas.fillColor=Color.init(hue: 61, saturation: 95, brightness: 95, alpha: 100)
+    }
+
+
 canvas.drawShapesWithBorders = false
 
 // Draw the rainbow circle
