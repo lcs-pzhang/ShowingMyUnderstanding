@@ -80,9 +80,14 @@ for i in stride(from: 1, through: 8, by: 1) {
     canvas.drawLine(fromX: 5, fromY: 40, toX: -5, toY: 45)
     canvas.drawLine(fromX: -5, fromY: 45, toX: 10, toY: 55)
     canvas.drawLine(fromX: 10, fromY: 55, toX: 1, toY: 70)
+    canvas.lineColor=Color.white
+    canvas.drawLine(fromX: 1, fromY: 70, toX: -20, toY: 80)
+    canvas.drawLine(fromX: -20, fromY: 80, toX: -5, toY: 100)
+    canvas.drawLine(fromX: -5, fromY: 100, toX: -30, toY: 125)
+    canvas.fillColor=Color.init(hue: 330, saturation: 95, brightness: 95, alpha: 100)
+    canvas.drawEllipse(centreX: -30, centreY: 125, width: 10, height: 10)
     canvas.rotate(by: 45)
 }
-
 
 
 
